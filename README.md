@@ -1,7 +1,7 @@
 # raizen_test
 Desenvolvimento de código conforme teste solicitado para a vaga de Engenheira de Dados Sr da empresa Raízen
 
-# Intalação
+# Instalação
 
 ## pip
 
