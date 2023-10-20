@@ -36,7 +36,7 @@ airflow users create --username admin --password your_password --firstname your_
 airflow users list
 ```
 
-#Executando o Airflow
+## Executando o Airflow
 ```bash
 airflow scheduler
 ```
