@@ -19,26 +19,5 @@ virtualenv airflow_env
 source airflow_env/bin/activate
 ```
 
-## Instalação do Airflow e bibliotecas necessárias
-```bash
-pip3 install apache-airflow[gcp,sentry,statsd]
-```
-
-## Criação da pasta "Dags", onde serão armazenadas as dags
-```bash
-mkdir dags
-```
-
-## Criação de usuário no Airflow
-```bash
-airflow users create --username admin --password your_password --firstname your_first_name --lastname your_last_name --role Admin --email your_email@domain.com
-
-airflow users list
-```
-
-## Executando o Airflow
-```bash
-airflow scheduler
-```
-
-Após realizar os passos acima, abra uma aba no navegador e vá até o endereço http://localhost:8080/
+## Instalação do Airflow no Docker
+Seguir passos conforme descrito na [documentação oficial do Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html) 
