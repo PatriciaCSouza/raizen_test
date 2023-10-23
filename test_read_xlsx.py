@@ -28,13 +28,12 @@ def read_csv(csv_file, output_file):
         create_new_csv(reader_file, output_file)
 
 def create_new_csv(reader_file, output_file):
-    with open(output_file, 'w') as g:
-        new_csv = csv.writer(g, delimiter=';',quotechar='\'')
-        write_new_header(new_csv)  
-        for row in reader_file:
-            if int(row[0]) <= 2020:
-                new_row = [';'.join([row[0]+row[1], row[3],row[4],'m3',row[5], str(now)])] 
-                new_csv.writerow(new_row)
+    new_csv = csv.writer(open(output_file, 'w'), delimiter=';',quotechar='\'')
+    write_new_header(new_csv)  
+    for row in reader_file:
+        if int(row[0]) <= 2020:
+            new_row = [';'.join([row[0]+row[1], row[3],row[4],'m3',row[5], str(now)])] 
+            new_csv.writerow(new_row)
         
 def get_total_derivative_fuels_from_generated_csv():
     with open(output_derivative_file) as fin:
